@@ -12,10 +12,14 @@ namespace Movie_Magic_2.Models
         [Required]
         public int MovieID { get; set; }
         [Required]
-        public string? Movie_name { get; set; }
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public string Movie_name { get; set; }
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         [Required]
-        public string? Director { get; set; }
-        public int? Release_Year { get; set; }
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public string Director { get; set; }
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public int Release_Year { get; set; }
         public float? Rating { get; set; }
         public string? Image { get; set; }
 

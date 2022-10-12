@@ -11,11 +11,8 @@ builder.Services.AddControllersWithViews();
 
 // ____________________
 
-
-
-
-    // I added this
-    builder.Services.AddDbContext<MoviesDbContext>(options =>
+// I added this
+builder.Services.AddDbContext<MoviesDbContext>(options =>
 options.UseMySql(builder.Configuration.GetConnectionString("MoviesDbConnection"), new MySqlServerVersion(new Version(8, 0, 28))));
 
 
