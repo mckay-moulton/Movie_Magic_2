@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Movie>
+
+<div class="text-center">
+    <h1 class="display-4">Movie Magic</h1>
+    <h2>Not all movies are created equal. Here are some of the better ones. </h2><br />
+</div>
+
+<div class="text-center">
+    <table class="table table-bordered table-striped">
+
+        <thead class="font-weight-bold">
+            <tr>
+                <td>Image</td>
+                <td>Movie Name</td>
+                <td>Director</td>
+                <td>Released</td>
+                <td>Rating</td>
+            </tr>
+        </thead>
+
+        @*now add rows to the table, using a loop*@
+        <tbody>
+            @foreach (Movie m in Model)
+            {
+            <tr>
+                <td><img src="@m.Image" width="140"/></td>
+                <td>@m.Movie_name</td>
+                <td>@m.Director</td>
+                <td>@m.Release_Year</td>
+                <td>@m.Rating</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+    <br />
