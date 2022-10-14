@@ -16,3 +16,45 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/*custome CSS */
+
+table,
+table td {
+    border: 1px solid #cccccc;
+}
+td {
+    height: 80px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.td1 {
+    height: 80px;
+    width: 250px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tdImage {
+    height: 80px;
+    width: 120px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+button {
+    background-color: lightsteelblue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 1px;
+}
+
+.button5 {
+    border-radius: 12px;
+}

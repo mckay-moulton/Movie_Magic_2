@@ -24,5 +24,17 @@ namespace Movie_Magic.Controllers
             return View(blah);
         }
 
+        public IActionResult FilterRating ()
+        {
+            var rating_filter = _context.Movie_Db.OrderByDescending(p => p.Rating).ToList();
+            return View(rating_filter);
+        }
+        public IActionResult FilterYear()
+        {
+            var year_filter = _context.Movie_Db.OrderByDescending(p => p.Release_Year).ToList();
+            return View(year_filter);
+        }
+
+
     }
 }

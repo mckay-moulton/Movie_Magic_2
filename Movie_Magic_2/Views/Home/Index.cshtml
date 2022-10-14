@@ -8,17 +8,26 @@
     <h1 class="display-4">Movie Magic</h1>
     <h2>Not all movies are created equal. Here are some of the better ones. </h2><br />
 </div>
+<div class="row">
+    <h5>
+        <b>
+            &nbsp; Filter By: &nbsp;&nbsp;&nbsp;<button class="button5"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="FilterRating">Rating</a></button> &nbsp; &nbsp;
+        <button class="button5"> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="FilterYear">Year</a></button>
+        </b>
+    </h5>
+</div>
+
 
 <div class="text-center">
     <table class="table table-bordered table-striped">
 
         <thead class="font-weight-bold">
             <tr>
-                <td>Image</td>
-                <td>Movie Name</td>
-                <td>Director</td>
-                <td>Released</td>
-                <td>Rating</td>
+                <td><b>Image</b></td>
+                <td><b>Movie Name</b></td>
+                <td><b>Director</b></td>
+                <td><b>Released</b></td>
+                <td><b>Rating</b></td>
             </tr>
         </thead>
 
@@ -26,15 +35,15 @@
         <tbody>
             @foreach (Movie m in Model)
             {
-            <tr>
-                <td><img src="@m.Image" width="140"/></td>
-                <td>@m.Movie_name</td>
-                <td>@m.Director</td>
-                <td>@m.Release_Year</td>
-                <td>@m.Rating</td>
-            </tr>
+                <tr>
+                    <td class="tdImage"><img src="@m.Image" width="140" /></td>
+                    <td class="td1"><h2>@m.Movie_name</h2></td>
+                    <td><h3>@m.Director</h3></td>
+                    <td><h3>@m.Release_Year</h3></td>
+                    <td><h3>@m.Rating</h3></td>
+                </tr>
             }
         </tbody>
     </table>
-    </div>
-    <br />
+</div>
+<br />

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "FilterYear";
+}
+@*
+<h1>FilterYear</h1>*@
+
+@model List<Movie>
+<div class="text-center">
+    <h1 class="display-4">Movie Magic</h1>
+    <h3>Filtered By: <b>Year (Newest - Oldest)</b> </h3><br />
+</div>
+<div>
+    &nbsp;<b><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Back</a></b>
+</div>
+
+<div class="text-center">
+    <table class="table table-bordered table-striped">
+
+        <thead class="font-weight-bold">
+            <tr>
+                <td><b>Image</b></td>
+                <td><b>Movie Name</b></td>
+                <td><b>Director</b></td>
+                <td><b>Released</b></td>
+                <td><b>Rating</b></td>
+            </tr>
+        </thead>
+
+
+        @*now add rows to the table, using a loop*@
+        <tbody>
+            @foreach (Movie m in Model)
+            {
+                <tr>
+                    <td><img src="@m.Image" width="140" /></td>
+                    <td class="td1"><h3>@m.Movie_name</h3></td>
+                    <td>@m.Director</td>
+                    <td>@m.Release_Year</td>
+                    <td>@m.Rating</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<br />
